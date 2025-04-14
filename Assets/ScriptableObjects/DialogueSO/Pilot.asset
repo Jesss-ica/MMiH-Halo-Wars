@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f89dcd9778163418240144bd3b05c1, type: 3}
+  m_Name: Pilot
+  m_EditorClassIdentifier: 
+  Index: 1
+  dialogue:
+  - text: When I fiend who shot me out of the sky...
+    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+  - text: I will kill them.
+    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
