@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42718359e5aba014cb42e0dcb2b12e13, type: 3}
+  m_Name: Archive
+  m_EditorClassIdentifier: 
+  entry:
+  - image: {fileID: 21300000, guid: 99fefe556aa092d4bba7d72834fadba1, type: 3}
+    title: Alexander
+    description: "Captain of the 7th Sub-Regiment, Rank B-1 Angel, Alexander, Reporting
+      in.\r\n\nEgo is the death of my comrades; although I can't fault them, the
+      allure of victory blinds their judgment. I was not originally the captain of
+      this sub-Regement, but the previous captain led everyone into a blood bath.
+      The main regiment believes I hid, coward from my order to fight, if only they
+      knew I stood and fought, dreaming my comrades could take another breath.\r\n\nBut
+      I am now alone in my fight; higher-ups order me to return, that only an Archangel
+      can go further alone. How can I return with the only thing on my hands being
+      the blood of my friends\u2026\r\n"
+  - image: {fileID: 21300000, guid: d93c1bbedcff48849807e34059efd3ce, type: 3}
+    title: The HALO Wars
+    description: 'The HALO wars began around 450 years ago, after a prophet told
+      of a being capable of wielding both Angelic and Demonic power, something not
+      seen since the 3 Angels of times pass.
+
+
+      The underworld had been building
+      an amulet to suppress such energy, something our realm had not the capability
+      to forge. If our realm held rule of such an amulet, we could ensure the safety
+      and suppression of such a being, if the prophesy is to arrive.
+
+
+      It would
+      be wrong to act as though we are not the ones who started this. However, the
+      universe will be benefited by us controlling the amulet... this is for the
+      greater good
+
+'
+  - image: {fileID: 21300000, guid: df20bc74a9c00c142bbe750152792f01, type: 3}
+    title: The Amulet
+    description: "A device, equipped around the waist, with the power to suppress
+      both angelic and demonic power. And what will be the last hope for the final
+      realm to wield it as the prophesy is foretold\u2026\r\n\nDemonic and Angelic
+      powers hold no moral stance. You can be filled with angelic power, yet angels
+      have gone rogue and joined the underworld in their fight."
+  - image: {fileID: 21300000, guid: c02d2f36f09277549bfda3d7cfb1148e, type: 3}
+    title: 3 Angels
+    description: a
