@@ -15,8 +15,8 @@ MonoBehaviour:
   Index: 2
   dialogue:
   - text: BWAAAACK (Show me in the direction of the next fight!!!)
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+    voice: {fileID: 8300000, guid: 0bd266219b4c91e49a216fe7c0be6eec, type: 3}
   - text: "Bwack (Oh, you don\u2019t believe I can take on anything further\u2026)"
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+    voice: {fileID: 8300000, guid: f7d043297c3f1e94098640c0d1cced91, type: 3}
   - text: SQUAAABAAAAAACCK (WELL ILL RACE YOU THERE!!!)
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+    voice: {fileID: 8300000, guid: cf3516ac0aeb99f4e9a1a2f7ef2fd22d, type: 3}

@@ -15,8 +15,8 @@ MonoBehaviour:
   Index: 1
   dialogue:
   - text: Who the hell shot me down!
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+    voice: {fileID: 8300000, guid: 5681c66ecdc965e499e3a520149edd02, type: 3}
   - text: ugh, whatever...
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+    voice: {fileID: 8300000, guid: b9571afc8d914304d9b5c0b639c9b64f, type: 3}
   - text: i have a mission to do, this is a needless distraction
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+    voice: {fileID: 8300000, guid: 8c06887b1932df74687beed96b029a1b, type: 3}
