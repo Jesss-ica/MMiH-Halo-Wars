@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        HitEffect.SetActive(false);
     }
 
     void Update()
@@ -164,15 +165,23 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI HPTMP;
     public GameManager GameManager;
     public HealthBar HealthBar;
+    public GameObject HitEffect;
     public void TakeDamage(int damage)
     {
         HealthPoints = HealthPoints - damage;
         //HPTMP.text = "HP:" + HealthPoints;
         HealthBar.GetCurrentFill(HealthPoints);
+        HitAnimation();
         if (HealthPoints <= 0)
         {
             GameManager.DeathState();
         }
+    }
+
+    void HitAnimation()
+    {
+        HitEffect.SetActive(true);
+        HitEffect.GetComponent<Animation>().Play();
     }
 
     private void OnTriggerEnter(Collider other)

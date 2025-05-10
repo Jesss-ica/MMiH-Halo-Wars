@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Bat : Agent
 {
-    private float CooldownDuration = 3f;
-    private int HealthPoints = 5;
+    private float CooldownDuration = 3.2f;
+    private int HealthPoints = 4;
     private char type = 'b';
 
 

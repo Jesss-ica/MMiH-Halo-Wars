@@ -13,6 +13,9 @@ public class Weapon : MonoBehaviour
     public GameObject weaponVisual;
     public AudioClip weaponSound;
 
+    private Sprite nonShotSprite;
+    public Sprite shotSprite;
+
     [HideInInspector]
     public bool IsAvailable = true;
     public float CooldownDuration = 2f;
@@ -21,6 +24,7 @@ public class Weapon : MonoBehaviour
     {
         mainCamera = Camera.main;
         crosshair.color = Color.cyan;
+        nonShotSprite = weaponVisual.GetComponent<SpriteRenderer>().sprite;
     }
 
     // Update is called once per frame
@@ -49,9 +53,9 @@ public class Weapon : MonoBehaviour
     }
     public IEnumerator WeaponFlash()
     {
-        weaponVisual.GetComponent<SpriteRenderer>().color = Color.blue;
+        weaponVisual.GetComponent<SpriteRenderer>().sprite = shotSprite;
         yield return new WaitForSeconds(0.2f);
-        weaponVisual.GetComponent<SpriteRenderer>().color = Color.white;
+        weaponVisual.GetComponent<SpriteRenderer>().sprite = nonShotSprite;
     }
     public IEnumerator StartCooldown()
     {

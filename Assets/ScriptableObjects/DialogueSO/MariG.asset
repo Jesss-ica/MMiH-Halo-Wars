@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 0
   dialogue:
-  - text: I seem to be lost, I was making my way to a coffee shop and this portal
-      opened.
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
-  - text: I'm a little disoriented.
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
-  - text: I'm Marigold by the way, nice to meet you.
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
-  - text: For a guardian angel, I'm quite good at needing getting lost.
-    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+  - text: Hello there, I seem to have gotten lost.
+    voice: {fileID: 8300000, guid: 69df94555d2b51c4e8a5fa76ed25721b, type: 3}
+  - text: "I was making my way to a coffee shop; you wouldn\u2019t happen to be able
+      to direct me there\u2026"
+    voice: {fileID: 8300000, guid: f98d6bb2c9ee12b47a200a5254a63c8d, type: 3}
+  - text: "\u2026"
+    voice: {fileID: 8300000, guid: 7b69039062846d94e93f650d7db72ed9, type: 3}
+  - text: You're not a man of many words, it seems. Either that or Jessica forgot
+      to code a two-way dialogue system.
+    voice: {fileID: 8300000, guid: ff2a052265e240846bbc7b38b424536f, type: 3}
+  - text: "yeah, THAT\u2019S RIGHT! I\u2019m allowed to break the fourth wall, I\u2019m
+      not supposed to exist at this point in-time. So it\u2019s fare game!"
+    voice: {fileID: 8300000, guid: a6d7b0f67334a884e8b051c1bfd31799, type: 3}

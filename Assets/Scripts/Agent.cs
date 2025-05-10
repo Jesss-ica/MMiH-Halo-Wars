@@ -66,10 +66,6 @@ public abstract class Agent : MonoBehaviour
 
     private void AssignEnemyToDoor()
     {
-        if(assignedDoor == null)
-        {
-            assignedDoor = GameObject.Find("Regigigas");
-        }
         if(assignedDoor != null)
         {
             if (assignedDoor.TryGetComponent(out MultiDoorHandler component))
@@ -128,6 +124,7 @@ public abstract class Agent : MonoBehaviour
     {
         //Stole this code from the Unity Docs :D https://docs.unity3d.com/2020.2/Documentation/Manual/class-Random.html#:~:text=Choosing%20a%20Random%20Item%20from%20an%20Array&text=var%20element%20%3D%20myArray%5BRandom.,Length)%5D%3B
         audioSource.clip = HitSounds[UnityEngine.Random.Range(0, HitSounds.Length)];
+        // audio.pitch
         audioSource.Play();
     }
 
@@ -158,7 +155,10 @@ public abstract class Agent : MonoBehaviour
         StopAllCoroutines();
         isDead = true;
         IsAvailable = false;
-        agent.enabled = false;
+        if(gameObject.TryGetComponent<NavMeshAgent>(out NavMeshAgent component3))
+        {
+            component3.enabled = false;
+        }
         meshRenderer.enabled = false;
         if (gameObject.TryGetComponent<SphereCollider>(out SphereCollider component))
         {
@@ -167,6 +167,10 @@ public abstract class Agent : MonoBehaviour
         if (gameObject.TryGetComponent<CapsuleCollider>(out CapsuleCollider component1))
         {
             component1.enabled = false;
+        }
+        if (gameObject.TryGetComponent<MeshCollider>(out MeshCollider component2))
+        {
+            component2.enabled = false;
         }
         PlayParticals();
         StartCoroutine(TimeTillDeath(1f));
@@ -177,21 +181,21 @@ public abstract class Agent : MonoBehaviour
         switch (Type) {
             case 'z':
                 saveData.ZombieDef++;
-                if (saveData.ZombieDef >= 10)
+                if (saveData.ZombieDef >= 30)
                 {
                     saveData.ZTrophy = true;
                 }
                 break;
             case 's':
                 saveData.SpiderDef++;
-                if (saveData.SpiderDef >= 10)
+                if (saveData.SpiderDef >= 20)
                 {
                     saveData.STrophy = true;
                 }
                 break;
             case 'b':
                 saveData.BatDef++;
-                if (saveData.BatDef >= 10)
+                if (saveData.BatDef >= 20)
                 {
                     saveData.BTrophy = true;
                 }

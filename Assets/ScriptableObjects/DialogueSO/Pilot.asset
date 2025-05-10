@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 1
   dialogue:
-  - text: When I fiend who shot me out of the sky...
+  - text: Who the hell shot me down!
     voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
-  - text: I will kill them.
+  - text: ugh, whatever...
+    voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}
+  - text: i have a mission to do, this is a needless distraction
     voice: {fileID: 8300000, guid: 7c481f32ad28c114ba1d52213f07858e, type: 3}

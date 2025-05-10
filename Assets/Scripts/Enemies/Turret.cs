@@ -5,8 +5,8 @@ using UnityEngine.ProBuilder;
 
 public class Turret : Agent
 {
-    private float CooldownDuration = 4.5f;
-    private int HealthPoints = 20;
+    private float CooldownDuration = 6.5f;
+    private int HealthPoints = 12;
     private char type = 't';
     private int multiShotAmount = 2;
     private float timeBetweenShots = 0.2f;
@@ -48,6 +48,7 @@ public class Turret : Agent
             Instantiate(projectile, projectileSpawnPoint.position, transform.rotation);
             yield return new WaitForSeconds(timeBetweenShots);
         }
-        Instantiate(spawnProjectile, projectileSpawnPoint.position, transform.rotation);
+        GameObject spawnBulletCache = Instantiate(spawnProjectile, projectileSpawnPoint.position, transform.rotation);
+        spawnBulletCache.GetComponent<SpawnerBuller>().SetDoorToAssign(assignedDoor);
     }
 }

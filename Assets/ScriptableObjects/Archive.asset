@@ -51,5 +51,78 @@ MonoBehaviour:
       powers hold no moral stance. You can be filled with angelic power, yet angels
       have gone rogue and joined the underworld in their fight."
   - image: {fileID: 21300000, guid: c02d2f36f09277549bfda3d7cfb1148e, type: 3}
-    title: 3 Angels
-    description: a
+    title: Three Angels
+    description: "The first 3 Angels, forged from the highest powers of the universe,
+      with the ability to wield both Angelic and Demonic power.\n\r\nLegend has it
+      that the heavens and the underworld once coexisted, but a divide in the beliefs
+      of 2 of the First Angels, Erebus and Nyx, led to a war. With the strength of
+      the two tearing a rift through the realm as their battle raged on, dividing
+      it in two.\n\r\nAs for the 3rd angel, Gaia, they felt the battle of their brother
+      and sister would eventually lead to the destruction of not only their realm,
+      but the mortal one, in which they had been created to protect. Instead of fighting,
+      the 3rd Angel fled to earth, and swore to protect it in case the battle threatened
+      the mortal realm.\r"
+  - image: {fileID: 21300000, guid: 4629027feb499b64ba40e7c4f1b967b2, type: 3}
+    title: Eon the Wonderer
+    description: "Eon was one of the strongest and smartest Archangels, being one
+      of the few survivors of the first war that split the realm. They provided great
+      strides in Angel technology, and even developed the bangle used to focus and
+      shoot pure Angelic energy.\n\r\n After a while, they grew discontent with their
+      status, idealising the strength of the 3 Angels wielded during the first war.
+      Wishing for a way to wield such power by controlling Angelic and Demonic energy.
+      Reverse-engineered the bangle to draw in demonic energy, which allowed them
+      slight control over both elements at once. Though over time, Eon\u2019s mind
+      grew mad, and his body was deformed and corrupted by demonic power.\n\r\nIt
+      is unclear whether anything of his consciousness remains, as he is driven by
+      a brainless desire to consume Angels in a futile attempt to regain Angelic
+      power. Now Eon is left with nothing to do but wander the underworld.\r"
+  - image: {fileID: 21300000, guid: 189d0e8b92724884fbf4791c064a057f, type: 3}
+    title: Satan the Overseer
+    description: "Satan was once a mortal king named Lucifer who lusted to rule all.
+      As he grew ill, he made a deal with Erebus just before he went into hiding
+      after the first war. Erebus would grant Lucifer all he ever wanted. Immortality,
+      A kingdom to reign over, and power beyond what he knew was possible. In return,
+      Lucifer would don the name \u201CSatan\u201D and serve as the main protector
+      of the underworld.\n\r\nSatan truly believes he rules this realm; however,
+      he forgets he is but a pawn in Erebus\u2019s plan. \r"
+  - image: {fileID: 21300000, guid: 09460cefeae517d478175fb2fa8d0f70, type: 3}
+    title: Felled
+    description: "Satan, watching as Eon got corrupted by demonic power, approached
+      him. Satan requested to be shown how to reverse engineer a bangle to draw in
+      pure demonic energy. Now, many angels captured during wars are turned into
+      these mindless zombies that do nothing but chase down Angels in order to feast
+      on their energy. Whilst Eon was able to withstand the slow corrosion, due to
+      the weaker nature of many angels and this version of the bangle being specifically
+      designed to corrupt the user, Angels are quickly corrupted and transformed
+      into felled.\r\n\nThere are many cases of many Felled eating their limbs to
+      attempt to salvage whatever angelic energy is left of their previous body.\r"
+  - image: {fileID: 21300000, guid: 7bd327e6803f3a14684dedfc694ca8e2, type: 3}
+    title: Eyes of Satan
+    description: Proto-clones of Satan. Each eye has its own will but can also be
+      directly controlled by Satan himself. Whilst the title of Overseer was granted
+      due to his standing as the ruler of the underworld, having a bunch of hive-mind
+      eyes that feed straight back to him definitely cemented that title.
+  - image: {fileID: 21300000, guid: cb287881f9a05b5439ce1b0557087060, type: 3}
+    title: Screechers
+    description: 'The Screechers are an invasive species of sentient plant. They
+      utilise a corrosive gas dispersed from spores inside their flower to slowly
+      digest their prey or to melt off parts of larger creatures to snack on. Whilst
+      they primarily hunt smaller creatures, hives of screechers have been known
+      to form a collective to feast on larger creatures.
+
+
+
+      They often find
+      their way around using the white antenna hidden under their leaves, picking
+      up scents and following them to potential prey. The antenna also acts as their
+      brain that, when reaching the end of their lifespans, will spontaneously combust
+      to spread their seeds.
+
+
+
+      Other species of Screechers have been known
+      to form dens to lay their offspring, and whilst they tend to have a higher
+      output, they are considerably less docile and, in rare cases, have been used
+      as food by other species of Screecher.
+
+'

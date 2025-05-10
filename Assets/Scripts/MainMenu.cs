@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     public GameObject buttonPanel;
     public ArchiveManager archiveManager;
 
+    private GameObject cacheGameObj;
+
     public Camera mainCamera;
 
     private bool archivePanelState = false;
@@ -23,6 +25,10 @@ public class MainMenu : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             ReadAchivment();
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseSubMenus();
         }
     }
     private void Start()
@@ -45,40 +51,47 @@ public class MainMenu : MonoBehaviour
             Transform objectHit = hit.transform;
             if (objectHit.tag == "Achivment")
             {
-                objectHit.gameObject.GetComponent<AudioSource>().Play();
+                if(shade.activeSelf == false)
+                    {
+                    if(cacheGameObj != null)
+                    {
+                        cacheGameObj.GetComponent<AudioSource>().Stop();
+                    }
+                    cacheGameObj = objectHit.gameObject;
+                    objectHit.gameObject.GetComponent<AudioSource>().Play();
+                }
             }
         }
 
     }
 
+    #region SubMenu
+    public void CloseSubMenus()
+    {
+        if(archivePanelState == true)
+        {
+            SetArchive();
+        }
+        if(creditPanelState == true)
+        {
+            SetCredit();
+        }
+        if(changeLogPanelState == true)
+        {
+            SetChangeLog();
+        }
+    }
+
     public void SetArchive()
     {
-        if (archivePanelState == false)
-        {
-            arcState();
-            archiveManager.StartArchive();
-            archivePanelState = true;
-        }
-        else
-        {
-            arcState();
-            archivePanelState = false;
-        }
+        arcState();
+        archivePanelState = !archivePanelState;
     }
 
     public void SetChangeLog()
     {
-        if (changeLogPanelState == false)
-        {
-            clogState();
-            //changeLog.transform.GetComponent<ChangeLogHandler>().ActivateChangeLog();
-            changeLogPanelState = true;
-        }
-        else
-        {
-            clogState();
-            changeLogPanelState = false;
-        }
+        clogState();
+        changeLogPanelState = !changeLogPanelState;
     }
 
     private void clogState()
@@ -97,14 +110,7 @@ public class MainMenu : MonoBehaviour
 
     public void SetCredit()
     {
-        if (creditPanelState == false)
-        {
-            creditPanelState = true;
-        }
-        else
-        {
-            creditPanelState = false;
-        }
+        creditPanelState = !creditPanelState;
         buttonPanel.SetActive(!creditPanelState);
         credits.SetActive(creditPanelState);
         shade.SetActive(creditPanelState);
@@ -114,5 +120,5 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-
+    #endregion
 }

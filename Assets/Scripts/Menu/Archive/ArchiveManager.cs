@@ -17,10 +17,8 @@ public class ArchiveManager : MonoBehaviour
 
     public static event Action OnArciveStarted;
     public static event Action OnArciveEnded;
-    
-    bool cycleArciveTriggered;
-    int cycleDirection;
-    bool inArchive = false;
+
+    int indexArchive = 0;
 
     public ArchiveSO ArchiveAsset;
 
@@ -28,52 +26,23 @@ public class ArchiveManager : MonoBehaviour
     public GameObject positionMarkerPrefab;
     public GameObject positionBar;
 
-    /*
-    public static ArchiveManager instance;
-
-    private void Awake()
+    void Update()
     {
-        if (instance == null)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            instance = this;
-        }
-        else
+            PreviousEntry();
+        }else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Destroy(this);
+            NextEntry();
         }
     }
-    */
 
-
-    public void StartArchive()
+    public void UpdateArchivePos()
     {
-        inArchive = true;
-        StopAllCoroutines();
-        StartCoroutine(RunArchive());
-    }
-
-    IEnumerator RunArchive()
-    {
-        cycleArciveTriggered = false;
-        OnArciveStarted?.Invoke();
-
-        for (int i = 0; inArchive == true; i = i + cycleDirection)
-        {
-            i = LoopArchive(i);
-            SetPosInArchive(i);
-            titleText.text = ArchiveAsset.entry[i].title;
-            descriptionText.text = ArchiveAsset.entry[i].description;
-            imageHolder.sprite = ArchiveAsset.entry[i].image;
-            while (cycleArciveTriggered == false)
-            {
-                // Wait for the current line to be skipped
-                yield return null;
-            } 
-            cycleArciveTriggered = false;
-        }
-
-        inArchive = false;
-        OnArciveEnded?.Invoke();
+        titleText.text = ArchiveAsset.entry[indexArchive].title;
+        descriptionText.text = ArchiveAsset.entry[indexArchive].description;
+        imageHolder.sprite = ArchiveAsset.entry[indexArchive].image;
+        SetPosInArchive(indexArchive);
     }
 
     public void SetArchivePosMarkers()
@@ -93,28 +62,20 @@ public class ArchiveManager : MonoBehaviour
         positionBar.transform.GetChild(i).transform.GetComponent<Image>().color = Color.blue;
     }
 
+    private void Start()
+    {
+        UpdateArchivePos();
+    }
+
     public void NextEntry()
     {
-        cycleDirection = 1;
-        cycleArciveTriggered = true;
+        indexArchive = (indexArchive + 1) % ArchiveAsset.entry.Length;
+        UpdateArchivePos();
     }
 
     public void PreviousEntry()
     {
-        cycleDirection = -1;
-        cycleArciveTriggered = true;
-    }
-
-    int LoopArchive(int i)
-    {
-        if( i == -1)
-        {
-            return ArchiveAsset.entry.Length - 1;
-        }
-        if( i == ArchiveAsset.entry.Length)
-        {
-            return 0;
-        }
-        return i;
+        indexArchive = (ArchiveAsset.entry.Length + indexArchive - 1) % ArchiveAsset.entry.Length;
+        UpdateArchivePos();
     }
 }

@@ -11,6 +11,8 @@ public class SpawnerBuller : Projectile
     public GameObject zombie;
     public GameObject bat;
     public GameObject spider;
+
+    public GameObject doorToAssign;
     
     
     void Start()
@@ -24,6 +26,11 @@ public class SpawnerBuller : Projectile
         ProjectileUpdate();
     }
 
+    public void SetDoorToAssign(GameObject DoorToAssign)
+    {
+        doorToAssign = DoorToAssign;
+    }
+
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other);
@@ -32,24 +39,26 @@ public class SpawnerBuller : Projectile
             other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
         }
         PickRandomSpawn();
-        Destroy(this.gameObject);
     }
 
     void PickRandomSpawn() //By MegadethRocks (2011), Avaliable at: https://discussions.unity.com/t/random-numbers-and-chance/438777
     {
+        GameObject enemyCache;
         float randValue = Random.value;
         if (randValue <= 0.33f)
         {
-            Instantiate(zombie, gameObject.transform.position, transform.rotation);
+            enemyCache = Instantiate(zombie, gameObject.transform.position, transform.rotation);
         }
         else if (randValue <= 0.66f)
         {
-            Instantiate(bat, gameObject.transform.position, transform.rotation);
+            enemyCache = Instantiate(bat, gameObject.transform.position, transform.rotation);
         }
         else
         {
-            Instantiate(spider, gameObject.transform.position, transform.rotation);
+            enemyCache = Instantiate(spider, gameObject.transform.position, transform.rotation);
         }
+        enemyCache.GetComponent<Agent>().assignedDoor = doorToAssign;
+        Destroy(this.gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
